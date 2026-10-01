@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour
 
     public Vector2 playerMoveInput;
     public bool isSprinting;
+    public bool isInteracting;
     
     
     void Awake()
@@ -31,10 +32,8 @@ public class InputManager : MonoBehaviour
 
     void OnInteract(InputValue value)
     {
-        if (value.isPressed)
-        {
-
-        }
+        Debug.Log("Input Manager Log");
+        isInteracting = value.isPressed;
     }
 
     void OnSprint(InputValue value)

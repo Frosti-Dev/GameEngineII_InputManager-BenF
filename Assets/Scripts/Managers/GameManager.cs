@@ -1,8 +1,11 @@
+using System.Threading;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager manager;
+
+    public int coinCount;
 
     void Awake()
     {
@@ -16,5 +19,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void UpdateCount()
+    {
+        coinCount++;
     }
 }

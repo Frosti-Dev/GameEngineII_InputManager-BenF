@@ -3,10 +3,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private InputManager input;
-
     private Rigidbody2D rb;
-    private Vector2 playerInput;
 
+    private Vector2 playerInput;
     private float moveSpeed;
     public float normalSpeed = 5f;
     public float sprintSpeed = 10f;
@@ -32,10 +31,5 @@ public class PlayerController : MonoBehaviour
     void CheckSprint()
     {
         moveSpeed = input.isSprinting ? sprintSpeed : normalSpeed;
-    }
-
-    void CheckInteractable()
-    {
-        
     }
 }
